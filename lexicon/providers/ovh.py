@@ -58,7 +58,7 @@ class Provider(BaseProvider):
     def authenticate(self):
         domain = self.options.get('domain')
 
-        domains = self._get('/domain/zone/')
+        domains = self._get('/domain/zone')
         if domain not in domains:
             raise Exception('Domain {0} not found'.format(domain))
 
